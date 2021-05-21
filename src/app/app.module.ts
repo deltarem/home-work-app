@@ -8,6 +8,7 @@ import { HouseListComponent } from './house-list/house-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HouseComponent } from './house/house.component';
 import {AppMaterialModule} from './app-material-module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {AppMaterialModule} from './app-material-module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppMaterialModule
   ],
   providers: [],
