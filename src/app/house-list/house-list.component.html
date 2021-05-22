@@ -9,7 +9,7 @@
     <!-- Name Column -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> The name of the house </th>
-      <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+      <td mat-cell *matCellDef="let row"> <a routerLink="/houses/{{getHouseId(row.url)}}">{{row.name}}</a> </td>
     </ng-container>
 
     <!-- Region Column -->

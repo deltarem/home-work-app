@@ -5,9 +5,9 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {HouseComponent} from './house/house.component';
 
 const routes: Routes = [
-  {path: 'house-list', component: HouseListComponent},
-  {path: 'house', component: HouseComponent},
-  {path: '', redirectTo: '/house-list', pathMatch: 'full'},
+  {path: 'houses', component: HouseListComponent},
+  {path: 'houses/:id', component: HouseComponent},
+  {path: '', redirectTo: '/houses', pathMatch: 'full'},
   {path: '**', component: PageNotFoundComponent}
 ];
 
