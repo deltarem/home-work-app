@@ -7,24 +7,20 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
-  selector: 'app-house-list',
-  templateUrl: './house-list.component.html',
-  styleUrls: ['./house-list.component.css']
+  selector: 'app-houses',
+  templateUrl: './houses.component.html',
+  styleUrls: ['./houses.component.css']
 })
-export class HouseListComponent implements OnInit {
+export class HousesComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   dataSource: MatTableDataSource<HouseType>;
-  houseList: HouseType[] = [];
   displayedColumns: string[] = ['name', 'region', 'coatOfArms'];
 
-  constructor(private houseService: HouseService,
-    private router: Router) {
-
-  }
+  constructor(private houseService: HouseService) {  }
 
   ngOnInit(): void {
-    this.getHouseList();
+    this.getHouses();
   }
 
   getHouseId(houseUrl: string): string {
@@ -47,7 +43,7 @@ export class HouseListComponent implements OnInit {
     }
   }
 
-  getHouseList(): void {
+  getHouses(): void {
     this.houseService.getHouses()
       .subscribe(res => {
         this.dataSource = new MatTableDataSource(res);

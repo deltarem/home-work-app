@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+}
+table.mat-table {
+  padding: 20px;
+}
+
+::ng-deep .mat-sort-header-content {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+td.mat-cell{
+  padding: 0;
+  border-bottom-width: 0px;  
+}
+
+th.mat-header-cell{
+  padding: 0;
+  border-bottom-width: 0px;
+  color: #264D73;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.mat-row:nth-child(even){
+  background-color: white;
+}
+      
+.mat-row:nth-child(odd){
+  background-color: whitesmoke;
+}
+
+th.mat-cell, td.mat-cell {
+  text-align: left;
+  padding-right: 25px;
+}
+
+th.mat-header-cell:first-of-type, td.mat-cell:first-of-type {
+  text-align: left;
+  padding-left: 10px;
+}

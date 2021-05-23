@@ -15,7 +15,7 @@ export class HouseService {
     return this.http.get<HouseType[]>(environment.apiUrl + 'houses');
   }
 
-  getHouse(houseUrl: string): Observable<any> {
-    return this.http.get<any>(houseUrl);
+  getHouse(houseId: string | null): Observable<HouseType> {
+    return this.http.get<HouseType>(environment.apiUrl + 'houses/' + houseId);
   }
 }

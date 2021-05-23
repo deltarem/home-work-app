@@ -1,1 +1,23 @@
-<p>house works!</p>
+<div class="main-container">
+<h1>{{houseData?.name}}</h1>
+<mat-card *ngIf="houseData" class="house-card">
+    <mat-card-content>
+        <div class="content">
+            <div class="row"><span class="label">Region</span><span class="value">{{houseData.region}}</span> </div>
+            <div class="row"><span class="label">Coat of Arms</span><span class="value">{{houseData?.coatOfArms}}</span>
+            </div>
+            <div class="row"><span class="label">Words</span><span class="value">{{houseData.words}}</span> </div>
+            <div class="row"><span class="label">Titles</span><span class="value">{{houseData.titles}}</span> </div>
+            <div class="row"><span class="label">Seats</span><span class="value">{{houseData.seats}}</span> </div>
+            <div class="row"><span class="label">Current Lord</span><span class="value">{{houseData.currentLord}}</span>
+            </div>
+            <div class="row"><span class="label">Heir</span><span class="value">{{houseData.heir}}</span> </div>
+            <div class="row"><span class="label">Founded</span><span class="value">{{houseData.founded}}</span> </div>
+            <div class="row"><span class="label">Founder</span><span class="value">{{houseData.founder}}</span> </div>
+        </div>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-stroked-button color="primary" (click)="goBack()">Back</button>
+    </mat-card-actions>
+</mat-card>
+</div>
